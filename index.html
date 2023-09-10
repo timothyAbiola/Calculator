@@ -1,103 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="calc.css">
-</head>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
 
-<body>
+  <body>
     <div class="bb">
-        <div class="sb">
-            <div class="text">
-                <h1>Calculator</h1>
-            </div>
-            <div>
-                <input type="text" class="ee" id="input1">
-                <input type="text" class="b" id="input2">
-            </div>
-            <div class="pee">
-                <p>MC</p>
-                <p>MR</p>
-                <p>M+</p>
-                <p>M-</p>
-                <p>MS</p>
-                <P>M</P>
-            </div>
-            <div class="btns">
-                <button class="bt" onclick="display('%')">%</button>
-                <button class="bt">√</button>
-                <button class="bt" onclick="square()">x²</button>
-                <button class="bt">⅟x</button>
-            </div>
-            <div class="btns">
-                <button class="bt" onclick="clearAll()">CE</button>
-                <button class="bt" onclick="clearAlll()">C</button>
-                <button class="bt" onclick="display('**')">^</button>
-                <button class="bt" onclick="display('/')">⁄</button>
-            </div>
-            <div class="btns">
-                <button class="bt" onclick="display(9)">9</button>
-                <button class="bt" onclick="display(8)">8</button>
-                <button class="bt" onclick="display(7)">7</button>
-                <button class="bt" onclick="display('*')">×</button>
-            </div>
-            <div class="btns">
-                <button class="bt" onclick="display(6)">6</button>
-                <button class="bt" onclick="display(5)">5</button>
-                <button class="bt" onclick="display(4)">4</button>
-                <button class="bt" onclick="display('-')">–</button>
-            </div>
-            <div class="btns">
-                <button class="bt" onclick="display(3)">3</button>
-                <button class="bt" onclick="display(2)">2</button>
-                <button class="bt" onclick="display(1)">1</button>
-                <button class="bt" onclick='display("+")'>+</button>
-            </div>
-            <div class="btns">
-                <button class="bt" onclick="backSpace()">backspace</button>
-                <button class="bt" onclick="display(0)">0</button>
-                <button class="bt" onclick="display('.')">.</button>
-                <button class="bt" value="=" onclick='calculate()'>=</button>
-            </div>
-
+      <div class="sb">
+        <div class="text">
+          <h1>Calculator</h1>
         </div>
+        <div>
+          <input type="text" class="ee" id="input1" />
+          <input type="text" class="b" id="input2" />
+        </div>
+        <div class="pee">
+          <p>MC</p>
+          <p>MR</p>
+          <p>M+</p>
+          <p>M-</p>
+          <p>MS</p>
+          <p>M</p>
+        </div>
+        <div class="btns">
+          <button class="bt" onclick="display('%')">%</button>
+          <button class="bt">√</button>
+          <button class="bt" onclick="square()">x²</button>
+          <button class="bt">⅟x</button>
+        </div>
+        <div class="btns">
+          <button class="bt" onclick="clearAll()">CE</button>
+          <button class="bt" onclick="clearAlll()">C</button>
+          <button class="bt" onclick="display('**')">^</button>
+          <button class="bt" onclick="display('/')">⁄</button>
+        </div>
+        <div class="btns">
+          <button class="bt" onclick="display(9)">9</button>
+          <button class="bt" onclick="display(8)">8</button>
+          <button class="bt" onclick="display(7)">7</button>
+          <button class="bt" onclick="display('*')">×</button>
+        </div>
+        <div class="btns">
+          <button class="bt" onclick="display(6)">6</button>
+          <button class="bt" onclick="display(5)">5</button>
+          <button class="bt" onclick="display(4)">4</button>
+          <button class="bt" onclick="display('-')">–</button>
+        </div>
+        <div class="btns">
+          <button class="bt" onclick="display(3)">3</button>
+          <button class="bt" onclick="display(2)">2</button>
+          <button class="bt" onclick="display(1)">1</button>
+          <button class="bt" onclick='display("+")'>+</button>
+        </div>
+        <div class="btns">
+          <button class="bt" onclick="backSpace()">backspace</button>
+          <button class="bt" onclick="display(0)">0</button>
+          <button class="bt" onclick="display('.')">.</button>
+          <button class="bt" value="=" onclick="calculate()">=</button>
+        </div>
+      </div>
     </div>
-</body>
-<script>
-    let  input1 = document.getElementById('input1');
+  </body>
+  <script>
+    let input1 = document.getElementById("input1");
     let input2 = document.getElementById("input2");
-    function display(value){
-        input1.value += value
+    function display(value) {
+      input1.value += value;
     }
     function calculate() {
-        let input1 = document.getElementById('input1').value;
-        let result = eval(input1);
-        document.getElementById('input2').value = result;
-      }
-      function square() {
-        let input1 = document.getElementById('input1').value;
-        let result = eval(input1 * input1);
-        document.getElementById('input2').value = result;
-      }
-      function clearAll() {
-        input1.value = ""
-       
-      }
-      function clearAlll() {
-        input1.value = "";
-        input2.value = "";
-      }
-      function backSpace() {
-        input1.value = input1.value.substr(0, input1.value.length -1);
-      }
+      let input1 = document.getElementById("input1").value;
+      let result = eval(input1);
+      document.getElementById("input2").value = result;
+    }
+    function square() {
+      let input1 = document.getElementById("input1").value;
+      let result = eval(input1 * input1);
+      document.getElementById("input2").value = result;
+    }
+    function clearAll() {
+      input1.value = "";
+    }
+    function clearAlll() {
+      input1.value = "";
+      input2.value = "";
+    }
+    function backSpace() {
+      input1.value = input1.value.substr(0, input1.value.length - 1);
+    }
     // function add{
-
 
     // }
     // function clearAll{}
-</script>
+  </script>
 </html>
